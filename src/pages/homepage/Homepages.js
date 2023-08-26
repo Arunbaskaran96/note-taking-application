@@ -6,7 +6,7 @@ import Notes from '../../components/notes/Notes'
 
 function Homepages() {
   const [search,setSearch]=useState("")
-  const data=[
+  const [data,setData]=useState([
     {
       id:1,
       title:"abc",
@@ -21,28 +21,8 @@ function Homepages() {
       id:3,
       title:"ggv",
       content:"lorem dsfh  dsfug jksdf jhdsf jhdsg sdjkg hdg zc "
-    },
-    {
-      id:4,
-      title:"mg",
-      content:"lorem dsfh  dsfug jksdf jhdsf jhdsg sdjkg hdg zc "
-    },
-    {
-      id:5,
-      title:"fd",
-      content:"lorem dsfh  dsfug jksdf jhdsf jhdsg sdjkg hdg zc "
-    },
-    {
-      id:6,
-      title:"ahmgbc",
-      content:"lorem dsfh  dsfug jksdf jhdsf jhdsg sdjkg hdg zc "
-    },
-    {
-      id:7,
-      title:"yjddf",
-      content:"lorem dsfh  dsfug jksdf jhdsf jhdsg sdjkg hdg zc "
     }
-  ]
+  ])
 
   const handleChange=(e)=>{
     e.preventDefault()
@@ -55,7 +35,7 @@ function Homepages() {
             <Topbar/>
         </div>
         <div className='homepageMiddle'>
-          <Addnotes/>
+          <Addnotes data={data} setData={setData} />
           <i class="fa-solid fa-house"></i>
         </div>
         <hr/>
